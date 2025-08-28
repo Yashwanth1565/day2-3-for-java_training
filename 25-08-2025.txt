@@ -1,0 +1,219 @@
+ 								25-08-2025
+Q. Move zerso to last
+package Arrays;
+import java.util.Arrays;
+
+public class ZerostoLast {
+    public static void main(String[] args) {
+        int[] arr = {1,4,5,0,2,0,4,6,0};
+        moveZerosToEnd(arr);
+        System.out.println(Arrays.toString(arr));  // Output: [1, 3, 12, 0, 0]
+    }
+
+    public static void moveZerosToEnd(int[] arr){
+        int k=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] != 0){
+                arr[k] = arr[i];
+                k++;
+            }
+        }
+        for(int i=k;i<arr.length;i++){
+            arr[k]= 0;
+            k++;
+        }
+    }
+}
+
+Output:
+[1, 4, 5, 2, 4, 6, 0, 0, 0]
+
+Q. Reverse of array
+package Arrays;
+import java.util.*;
+public class ReverseOfArray {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6};
+        reverseOfArray(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void reverseOfArray(int[] arr){
+        int k = arr.length-1,j=0;
+        for(int i=k;i>k/2;i--){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
+
+        }
+    }
+}
+output:
+[6, 5, 4, 3, 2, 1]
+
+ 
+Q. Reverse of an Array
+package Arrays;
+import java.util.*;
+public class ReverseOfArray {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        reverseOfArray(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void reverseOfArray(int[] arr){
+        int l= arr.length-1;// l = 4th index
+        int j=0;
+        for(int i=0;i<= l/2; i++){
+            int temp = arr[i];
+            arr[i] = arr[l];
+            arr[l] = temp;
+            l--;
+        }
+    }
+}
+
+Output:
+[5, 4, 3, 2, 1]
+
+
+Q. Find the second maximun element in the Given array.
+package Arrays;
+import java.util.Arrays;
+public class SecondMaxEl {
+    **public static void main(String\[] args) {**
+        \*\*int\\\[] arr = {1,6,4,5,9,8};\*\*
+
+        \\\*\\\*System.out.println("The second max element in the list is: "+secondMaxElement(arr));\\\*\\\*
+
+    \\\*\\\*}\\\*\\\*
+
+    \\\*\\\*public static int secondMaxElement(int\\\\\\\[] arr){\\\*\\\*
+
+        \\\*\\\*int max = 0,s\\\\\\\_max=0;\\\*\\\*
+
+        \\\*\\\*for(int i=0;i<arr.length;i++){\\\*\\\*
+
+            \\\*\\\*if(arr\\\\\\\[i]>max){\\\*\\\*
+
+                \\\*\\\*s\\\\\\\_max = max;\\\*\\\*
+
+                \\\*\\\*max = arr\\\\\\\[i];\\\*\\\*
+
+            \\\*\\\*}else if(arr\\\\\\\[i] > s\\\\\\\_max){\\\*\\\*
+
+                \\\*\\\*s\\\\\\\_max = arr\\\\\\\[i];\\\*\\\*
+
+            \\\*\\\*}\\\*\\\*
+
+        \\\*\\\*}\\\*\\\*
+
+        \\\*\\\*return s\\\\\\\_max;\\\*\\\*
+
+    \\\*\\\*}\\\*\\\*
+
+
+
+
+
+
+
+}
+
+Output:
+The second max element in the list is: 8
+
+Q. Duplicates in the given array.
+package Arrays;
+import java.util.Arrays;
+public class DuplicateEl {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 2, 4, 3};
+        dupsElInArray(arr);
+    }
+
+    public static int dupsElInArray(int[] arr) {
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i] == arr[j]){
+                    System.out.println(arr[i]);
+                    break;
+                }
+            }
+        }
+        return arr.length;
+    }
+}
+Output:
+2
+3
+
+
+Or
+package Arrays;
+import java.util.Arrays;
+public class DuplArray {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,2,4,3};
+        dupElement(arr);
+
+    }
+    public static void dupElement(int[] arr){
+        boolean[] visited = new boolean[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(visited[i]==true)
+                continue;
+            int count = 1;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[j]==arr[i]){
+                    visited[j]=true;
+                    count++;
+                }
+            }
+            if(count > 1){
+                System.out.println(arr[i]+"--> Occurs "+count+" times");
+            }
+        }
+
+    }
+
+}
+
+Output:
+2--> Occurs 2 times
+3--> Occurs 2 times
+
+Or
+package Arrays;
+import java.util.Arrays;
+public class DuplArray {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,2,4,3};
+        dupElement(arr);
+
+    }
+    public static void dupElement(int[] arr){
+        boolean[] visited = new boolean[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(visited[i]==true)
+                continue;
+            int count = 1;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[j]==arr[i]){
+                    visited[j]=true;
+                    count++;
+                }
+            }
+
+                System.out.println(arr[i]+"--> Occurs "+count+" times");
+            }
+        }
+
+    }
+
+Output:
+1--> Occurs 1 times
+2--> Occurs 2 times
+3--> Occurs 2 times
+4--> Occurs 1 times
+Q. Write a java program to sort an unsorted array in natural order

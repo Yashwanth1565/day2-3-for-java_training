@@ -1,306 +1,334 @@
-                                                           22-08-2025
+                                                           22-08-2025
 
 
 
 
-							Floyd Rigth Angle Pattern
+ 							Floyd Rigth Angle Pattern
 Q. Pattern 7
 import java.util.*;
 public class ptr7 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the Number: ");
-        int n = sc.nextInt();
-        int num = 1;
-        for(int i=0;i<n;i++){
-            for(int j=0;j<=i;j++){
-                if(i%2==0){
-                    if(j%2==0){
-                        System.out.print(num++ +" ");
-                    }else{
-                        System.out.print("0 ");
-                    }
-                }else{
-                    if(j%2==0){
-                        System.out.print("0 ");
-                    }else{
-                        System.out.print(num++ +" ");
-                    }
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Number: ");
+        int n = sc.nextInt();
+        int num = 1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                if(i%2==0){
+                    if(j%2==0){
+                        System.out.print(num++ +" ");
+                    }else{
+                        System.out.print("0 ");
+                    }
+                }else{
+                    if(j%2==0){
+                        System.out.print("0 ");
+                    }else{
+                        System.out.print(num++ +" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 
 OR
 
 if((i+j)%2==0){
-	sout(num++ +" ");
+ 	sout(num++ +" ");
 }else{
-	sout("0");
+ 	sout("0");
 }
 
 Output:
 Enter the Number: 5
-1 
-0 2 
-3 0 4 
-0 5 0 6 
-7 0 8 0 9 
+1
+0 2
+3 0 4
+0 5 0 6
+7 0 8 0 9
 
 
 Q.Pattern8
 import java.util.*;
 public class ptr8 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the Number: ");
-        int n = sc.nextInt();
-        for(int i=0;i<n;i++){
-            for(int j=0;j<=i;j++){
-                if(i%2==0){
-                    if(j%2==0){
-                        System.out.print((char)('a'+j)+" ");
-                    }else{
-                        System.out.print(j+1 +" ") ;
-                    }
-                }else{
-                    if(j%2!=0){
-                        System.out.print((char)('a'+j)+" ");
-                    }else{
-                        System.out.print(j+1 +" ");
-                    }
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Number: ");
+        int n = sc.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                if(i%2==0){
+                    if(j%2==0){
+                        System.out.print((char)('a'+j)+" ");
+                    }else{
+                        System.out.print(j+1 +" ") ;
+                    }
+                }else{
+                    if(j%2!=0){
+                        System.out.print((char)('a'+j)+" ");
+                    }else{
+                        System.out.print(j+1 +" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 OR
 if((i+j)==0){
-	sout((char)('a'+j)+" ");
+ 	sout((char)('a'+j)+" ");
 }else{
-	sout(j+1 +" ");
+ 	sout(j+1 +" ");
 }
 
 Output:
 Enter the Number: 5
-a 
-1 b 
-a 2 c 
-1 b 3 d 
+a
+1 b
+a 2 c
+1 b 3 d
 a 2 c 4 e
 
 Q.Pattern9
 import java.util.*;
 public class ptr9 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Value: ");
-        int n = sc.nextInt();
-        int num=1;
-        for(int i=0;i<n;i++){
-            for(int j=0;j<=i;j++){
-                if(i%2==0){
-                    if(j%2==0){
-                        System.out.print((char)('a'+j)+" ");
-                    }else{
-                        System.out.print(num+j +" ");
-                    }
-                }else{
-                    if(j%2==0){
-                        System.out.print(num+j +" ");
-                    }else{
-                        System.out.print((char)('a'+j)+" ");
-                    }
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Value: ");
+        int n = sc.nextInt();
+        int num=1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                if(i%2==0){
+                    if(j%2==0){
+                        System.out.print((char)('a'+j)+" ");
+                    }else{
+                        System.out.print(num+j +" ");
+                    }
+                }else{
+                    if(j%2==0){
+                        System.out.print(num+j +" ");
+                    }else{
+                        System.out.print((char)('a'+j)+" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 
 OR
 
 if((i+j)%2==0){
-                    System.out.print((char)('a'+j)+" ");
-                }else{
-                    System.out.print(num+j +" ");
-                }
+                    System.out.print((char)('a'+j)+" ");
+                }else{
+                    System.out.print(num+j +" ");
+                }
 
 Output:
-Enter the Value: 
+Enter the Value:
 5
-a 
-1 b 
-a 2 c 
-1 b 3 d 
-a 2 c 4 e 
+a
+1 b
+a 2 c
+1 b 3 d
+a 2 c 4 e
 
 
 Q. Pattern10
 import java.util.*;
 
 public class ptr10 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the numbner: ");
-        int n = sc.nextInt();
-        int val=2;
-        for(int i=0;i<n;i++){
-            //int val=2;
-            for(int j=0;j<=i;j++){
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the numbner: ");
+        int n = sc.nextInt();
+        int val=2;
+        for(int i=0;i<n;i++){
+            //int val=2;
+            for(int j=0;j<=i;j++){
 
-                if((i==j) || (j==0) || (i==n-1)||(i==2)){
-                    System.out.print("1 ");
+                if((i==j) || (j==0) || (i==n-1)||(i==2)){
+                    System.out.print("1 ");
 
-                }else{
+                }else{
 
-                    System.out.print(val++);
-                    System.out.print("  ");
-                }
-            }
-            System.out.println();
-        }
+                    System.out.print(val++);
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
 
-    }
+    }
 }
 Output:
 Enter the numbner: 6
-1 
-1 1 
-1 1 1 
-1 2  3  1 
-1 4  5  6  1 
-1 1 1 1 1 1 
+1
+1 1
+1 1 1
+1 2  3  1
+1 4  5  6  1
+1 1 1 1 1 1
 
 Enter the numbner: 5
-1 
-1 1 
-1 1 1 
-1 2  3  1 
-1 1 1 1 1 
+1
+1 1
+1 1 1
+1 2  3  1
+1 1 1 1 1
 
 Q.ButterFly Pattern
 import java.util.*;
 public class Butterfly {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter: ");
-        int n=sc.nextInt();
-        for(int i=1;i<=n*2;i++){
-            for(int j=1;j<=n*2;j++){
-                if((j<=i && i+j <= n*2) || (j>i && i+j > n*2)){
-                    System.out.print("* ");
-                }else{
-                    System.out.print("  ");
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter: ");
+        int n=sc.nextInt();
+        for(int i=1;i<=n*2;i++){
+            for(int j=1;j<=n*2;j++){
+                if((j<=i && i+j <= n*2) || (j>i && i+j > n*2)){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 
 enter: 5
-*                 * 
-* *             * * 
-* * *         * * * 
-* * * *     * * * * 
-* * * * * * * * * * 
-* * * *     * * * * 
-* * *         * * * 
-* *             * * 
-*                 * 
-                    
+*                 *
+* *             * *
+* * *         * * *
+* * * *     * * * *
+* * * * * * * * * *
+* * * *     * * * *
+* * *         * * *
+* *             * *
+*                 *
+ 
 Q.Hour Glass
 import java.util.*;
 public class HourGlass {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter: ");
-        int n=sc.nextInt();
-        for(int i=1;i<n*2;i++){
-            for(int j=1;j<=n*2;j++){
-                if(!((j<i && i+j < n*2) || (j>i && i+j > n*2))){
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter: ");
+        int n=sc.nextInt();
+        for(int i=1;i<n*2;i++){
+            for(int j=1;j<=n*2;j++){
+                if(!((j<i && i+j < n*2) || (j>i && i+j > n*2))){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 Output:
 enter: 5
-* * * * * * * * *   
-  * * * * * * *     
-    * * * * *       
-      * * *         
-        *           
-      * * *         
-    * * * * *       
-  * * * * * * *     
-* * * * * * * * * 
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
 
 Q.Hallow Rhombus
 import java.util.*;
 public class HallowDiamond {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter a number: ");
-        int n=sc.nextInt();
-        for(int i=0;i<n*2-1;i++){
-            for(int j=0;j<n*2-1;j++){
-                if(i+j == n-1 || j-i == n-1 || i-j == n-1 || i+j == 3*(n-1)){
-                    System.out.print("* ");
-                }else{
-                    System.out.print("  ");
-                }
-            }
-            System.out.println();
-        }
-    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a number: ");
+        int n=sc.nextInt();
+        for(int i=0;i<n*2-1;i++){
+            for(int j=0;j<n*2-1;j++){
+                if(i+j == n-1 || j-i == n-1 || i-j == n-1 || i+j == 3*(n-1)){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 Output:
 enter a number: 5
-        *         
-      *   *       
-    *       *     
-  *           *   
-*               * 
-  *           *   
-    *       *     
-      *   *       
-        *         
- 
-Method Changing 
+        *
+      *   *
+    *       *
+  *           *
+*               *
+  *           *
+    *       *
+      *   *
+        *
+ 
+Method Changing
 Constructor Chaining
 
 1.Method Chaining :
-	one method calling other methos.
+ 	one method calling other methos.
 return types:
 THEY are three types of return type. They are:
-	i.Void
-	ii. Primitive
-	iii. Non-Primitive.
+ 	i.Void
+ 	ii. Primitive
+ 	iii. Non-Primitive.
 void:
-	It return s nothing.
+ 	It return s nothing.
 
 Primitive Datatype:
-	8 primitive datatypes
+ 	8 primitive datatypes
 
 Non-primitive datatypes:
-	all classes are  used to return the non-primitive datatypes
+ 	all classes are  used to return the non-primitive datatypes
 
 ***for Method chaining , we need the non-primitive datatypes...***
 
 Constructor Chaining :
-	 one constructor calling another constructor..
-	we need two calling statements to achieve the constructor chaining.
-		a. this()
-		b. super()
+ 	 one constructor calling another constructor..
+ 	we need two calling statements to achieve the constructor chaining.
+ 		a. this()
+ 		b. super()
+
+
+ 	Recursion:
+ 	**Again and again calling myself is called recursion.**
 
 
 
+`			*Factorial
+ 				for(int i=1;i<=n;i++){
+ 					fac = fac * i;
+ 				}
+ 				sout(fac);
+ 
+ 				i. Initiaization
+ 				ii. Base condition
+ 				iii. Recursive call
+class Demo{
+ 	main(){
+ 		int n= 5;
+ 		sout(fac(n));
+ 	}
+ 	public static int fac(int n//Initialization){
+ 		if(n==0 || n==1){
+ 			return 1;//Base condition
+ 		}
+ 	//RETURN statement is mandatory....
+ 	return n*fac(n-1);//Recursive call
+ 	}
+}
+
+It perfoms backpropogation and while back propogating , it destroys all the values and get s the last and final value

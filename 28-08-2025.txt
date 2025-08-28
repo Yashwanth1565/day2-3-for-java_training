@@ -1,0 +1,393 @@
+					28-08-2025
+Strings:
+	Combination of characters.
+	it's a non-primitive datatype
+	
+charAt() - returns the index 
+1st way to create a string operator
+String s1 = "Hello";
+
+here String - class Name
+s1 - reference variable
+inside the variable , we can store 2 values 
+	i. null value
+	ii. value of variable
+
+		inside heap area , we have one more are is there names called String constant pool area.
+
+Inside the s1 , the address is getting stored that stoes the value "Hello" 
+
+2nd way to create a string operator:
+String s2 = new String("Hi");
+the job of new operator , it will create a random block of memory(heap area) 
+	it creates obj in heap area , the different address for s2 is getting created.
+
+Rough r = new Rough();
+r - stores the address 
+new - creates heap area to crate the address
+Rough() - Constructo --> stores the values of non-static members.
+
+r.toString();
+package_name.Class_name@HexaDeimalValue
+
+
+package Strings;
+import java.util.*;
+public class Basic_String {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1);
+        String str2 = new  String("Hi");
+        System.out.println(str2);
+
+        Basic_String b1 = new Basic_String();//random block of heap area and stores address
+        System.out.println(b1);
+    }
+}
+Hello
+Hi
+Strings.Basic_String@27716f4
+
+
+package Strings;
+import java.util.*;
+public class Basic_String {
+    //Override the toString method
+    public String toString(){
+        return "Hello Class";
+    }
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1);
+        String str2 = new  String("Hi");
+        System.out.println(str2);
+        Basic_String b1 = new Basic_String();//random block of heap area and stores address
+        System.out.println(b1.toString());
+        Basic_String b2 = new Basic_String();
+        System.out.println(b2);
+
+    }
+}
+
+Hello
+Hi
+Hello Class
+Hello Class
+
+package Strings;
+import java.util.*;
+public class Basic_String {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        int len = str1.length();
+        System.out.println(len);
+        System.out.println("++++++++++");
+        System.out.println(str1.length());
+        System.out.println("++++++++++");
+        System.out.println(str1.charAt(3));
+
+        System.out.println(str1.toLowerCase());
+        System.out.println(str1.toUpperCase());
+
+    }
+}
+
+Output:
+5
+++++++++++
+5
+++++++++++
+l
+hello
+HELLO
+
+package Strings;
+import java.util.*;
+public class Rough {
+    public static void main(String[] args) {
+        String str = "Hello Java";
+        int len = str.length();
+        for (int i=0;i<len;i++){
+            System.out.println(str.charAt(i));
+        }
+    }
+
+}
+
+H
+e
+l
+l
+o
+ 
+J
+a
+v
+a
+
+
+
+package Strings;
+import java.util.*;
+public class ReverseString {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = " ";
+
+        int len = str1.length();
+
+        for(int i=len-1;i>=0;i--){
+            //int temp=str1.charAt(i);
+            str2 += str1.charAt(i);
+
+
+
+        }
+        System.out.println(str2);
+    }
+}
+
+Output:
+ olleH
+
+package Strings;
+
+public class ReverseFor {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        for(int i=str1.length()-1;i>=0;i--){
+            System.out.println(str1.charAt(i));
+        }
+    }
+}
+
+o
+l
+l
+e
+H
+
+
+Q. Palindrome
+package Strings;
+import java.util.*;
+public class Palindrome {
+    public static void main(String[] args) {
+        String str1 = "madam";
+        String str2 = "";
+        int len =  str1.length();
+        for(int i=len-1;i>=0;i--){
+
+            str2 +=  str1.charAt(i);
+        }
+or
+	for(int i=0;i<len;i++){
+            str2 = str1.charAt(i)+ str2;
+        }
+        System.out.println(str2);
+        if(str1.equals(str2)){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
+        }
+    }
+}
+Output:
+madam
+Palindrome
+
+
+
+Trim():
+It removes the white space from starting as well as ending of String
+package Strings;
+import java.util.*;
+public class TrimeMethod {
+    public static void main(String[] args) {
+        String str = " Hello ";
+        System.out.println(str.trim());
+    }
+}
+
+Hello
+
+package Strings;
+import java.util.*;
+public class Trim {
+    public static void main(String[] args) {
+        String str = " Yash wanth ";
+        System.out.println(str);
+        System.out.println(str.trim());
+        String str2 = "";
+        for (int i = 0; i < str.length(); i++){
+            if(str.charAt(i)==' '){
+                continue;
+            }else{
+                str2 += str.charAt(i);
+            }
+
+        }
+        System.out.println(str2);
+    }
+}
+
+ Yash wanth 
+Yash wanth
+Yashwanth
+
+
+package Strings;
+import java.util.*;
+public class RemoveDigits {
+    public static void main(String[] args) {
+        String str1 = "H1t3";
+        String str2 = "";
+
+        for (int i = 0; i < str1.length(); i++) {
+            if(str1.charAt(i) >='0' &&  str1.charAt(i) < '9'){
+                continue;
+            }else{
+                str2 += str1.charAt(i);
+            }
+
+        }
+        System.out.println(str2);
+    }
+}
+Output:
+Ht
+
+
+package Strings;
+import java.util.*;
+public class Count {
+    public static void main(String[] args){
+        String  str1 = "Hello12 World34 Java56";
+        int count1 = 0,count2 = 0,count3 = 0;
+        for(int i=0;i<str1.length();i++){
+            if(str1.charAt(i)>='A'&&str1.charAt(i) <= 'Z'){
+                //count1 = count1 + 1;
+                count1++;
+            }else if(str1.charAt(i)>='a'&&str1.charAt(i) <= 'z'){
+                //count2 += 1;
+                count2++;
+            }else if(str1.charAt(i)>='0'&&str1.charAt(i) <= '9'){
+                count3++;
+            }
+
+
+        }
+        System.out.println(count1);
+        System.out.println(count2);
+        System.out.println(count3);
+    }
+}
+Output:
+3
+11
+6
+
+package Strings;
+import java.util.*;
+
+public class Replacing {
+    public static void main(String[] args) {
+        String str = "Hello world , this is my pari, vowels are aeious are good";
+        String str1 = "";
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'||
+            str.charAt(i)=='A'||str.charAt(i)=='E'||str.charAt(i)=='I'||str.charAt(i)=='O'||str.charAt(i)=='U'){
+                str1=str1+'@';
+            }else{
+                str1=str1+str.charAt(i);
+            }
+        }
+        System.out.println(str1);
+    }
+}
+Output:
+H@ll@ w@rld , th@s @s my p@r@, v@w@ls @r@ @@@@@s @r@ g@@d
+
+
+Q. Counting Spaces
+package Strings;
+import java.util.*;
+public class Trimmimg {
+    public static void main(String[] args) {
+        String str = "  Hello Java   ";
+        int stSpace = 0;
+        int endSpace = 0;
+        String str2="";
+        for(int i=2;i<str.length()-2;i++){
+            str2 = str2+str.charAt(i);
+        }
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==' '){
+                stSpace++;
+            }else{
+                break;
+            }
+
+        }
+        System.out.println("Starting Space: "+stSpace);
+        System.out.println("+++++++++++");
+        for(int i=str.length()-1;i>0;i--){
+            if(str.charAt(i)==' '){
+                endSpace++;
+            }else{
+                break;
+            }
+        }
+        System.out.println("Ending Space: "+endSpace);
+        System.out.println("++++++++++");
+        System.out.println("The actual String:"+str);
+        System.out.println("The Trimmed String:"+str2);
+    }
+}
+
+Output:
+Starting Space: 2
++++++++++++
+Ending Space: 3
+++++++++++
+The actual String:  Hello Java   
+The Trimmed String:Hello Java 
+
+
+
+Q. Remove all special chars from a given String
+package Strings;
+import java.util.*;
+public class RemoveSpecialCharacters {
+    public static void main(String[] args) {
+        String str = "Yash12 !@#$%^&*() 1565 yash 2111";
+        String str2 = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')||(ch >= '0' && ch <= '9')){
+                str2=str2+ch;
+            }
+        }
+        System.out.println("The String without special Characters:" +str2);
+    }
+}
+
+Output:
+
+The String without special Characters:Yash121565yash2111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,14 @@
+					**26-08-2025**
+
+Two Dimensional Array:
+ 	for 1D array
+ 		int[] arr_name = new int[size_of_array];
+ 	for 2D array:
+int[][] arr_name = new int[row_size][col_size];
+1st [] represents the row
+2nd [] represents the coloumn
+
+***The row size is mandatory***
+*** The coloumn size is optional***
+
+ 
